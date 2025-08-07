@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AudioTranscriber.Application\AudioTranscriber.Application.csproj" />
     <ProjectReference Include="..\AudioTranscriber.Shared\AudioTranscriber.Shared.csproj" />
+    <ProjectReference Include="..\AudioTranscriber.Infrastructure\AudioTranscriber.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
