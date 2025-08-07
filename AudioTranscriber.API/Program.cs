@@ -1,7 +1,6 @@
-// using AudioTranscriber.API;
-// using AudioTranscriber.Application;
-// using AudioTranscriber.Infrastructure;
-// using AudioTranscriber.Shared;
+using AudioTranscriber.Application;
+using AudioTranscriber.Infrastructure;
+using AudioTranscriber.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,9 +10,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Layered Dependency Injections
-// builder.Services.AddApplicationServices();
-// builder.Services.AddInfrastructureServices(builder.Configuration);
-// builder.Services.AddSharedServices();
+builder.Services.AddApplicationServices();
+builder.Services.AddInfrastructureServices();
+builder.Services.AddSharedServices();
 
 var app = builder.Build();
 
