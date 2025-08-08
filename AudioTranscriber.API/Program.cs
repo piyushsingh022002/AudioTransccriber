@@ -1,8 +1,18 @@
 using AudioTranscriber.Application;
+using AudioTranscriber.Application.Interfaces;
 using AudioTranscriber.Infrastructure;
+using AudioTranscriber.Infrastructure.Persistence;
+using AudioTranscriber.Infrastructure.Services;
 using AudioTranscriber.Shared;
+using AudioTranscriber.Shared.Config;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDb"));
+builder.Services.AddSingleton<MongoDbContext>();
+builder.Services.AddScoped<IAudioMetadataRepository, AudioMetadataRepository>();
+
 
 // Add services to the container.
 builder.Services.AddControllers();
