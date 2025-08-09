@@ -11,7 +11,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDb"));
 builder.Services.AddSingleton<MongoDbContext>();
-builder.Services.AddScoped<IAudioMetadataRepository, AudioMetadataRepository>();
 
 
 // Add services to the container.
