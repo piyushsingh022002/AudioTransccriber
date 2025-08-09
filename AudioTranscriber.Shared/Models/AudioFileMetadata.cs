@@ -12,4 +12,8 @@ public class AudioFileMetadata
     public string FileName { get; set; } = default!;
     public string FilePath { get; set; } = default!;
     public DateTime UploadedAt { get; set; } = DateTime.UtcNow;
+
+    public string? ContentType { get; set; } = default!;
+public Dictionary<string, string>? MetaData { get; set; } // optional extra data
+
 }

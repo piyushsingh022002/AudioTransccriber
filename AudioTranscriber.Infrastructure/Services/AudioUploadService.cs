@@ -1,5 +1,5 @@
 using AudioTranscriber.Application.Interfaces;
-using AudioTranscriber.Application.Interfaces.Repositories;
+using AudioTranscriber.Application.Interfaces;
 using AudioTranscriber.Application.Interfaces.Services;
 using AudioTranscriber.Application.Models;
 using AudioTranscriber.Shared.Models;
